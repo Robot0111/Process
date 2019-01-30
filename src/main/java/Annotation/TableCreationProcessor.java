@@ -43,7 +43,6 @@ public class TableCreationProcessor extends AbstractProcessor {
 				annotations.toArray(new TypeElement[] {});
 			}
 		}
-		// Collections.shuffle(tions);
 		for (TypeElement anno : ty) {
 			for (Element round : roundEnv.getElementsAnnotatedWith(anno)) {
 				// accept方法会判断Element类型 对应执行具体的类型方法
