@@ -5,6 +5,7 @@ import static javax.lang.model.util.ElementFilter.methodsIn;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -82,17 +83,17 @@ if(k.getModifiers().contains(Modifier.PUBLIC)&&!k.getKind().equals(ElementKind.C
      * 这里必须指定，这个注解处理器是注册给哪个注解的。注意，它的返回值是一个字符串的集合，包含本处理器想要处理的注解类型的合法全称 
      * @return  注解器所支持的注解类型集合，如果没有这样的类型，则返回一个空集合 
      */  
-   /* @Override  
+    @Override  
     public Set<String> getSupportedAnnotationTypes() {
     	return Collections.singleton(ExtractInterface.class.getCanonicalName());
-    }  */
+    }  
   
     /** 
      * 指定使用的Java版本，通常这里返回SourceVersion.latestSupported()，默认返回SourceVersion.RELEASE_6 
      * @return  使用的Java版本 
      */
-   /* @Override  
+    @Override  
     public SourceVersion getSupportedSourceVersion() {  
         return SourceVersion.latestSupported();  
-    }  */
+    }  
 }
